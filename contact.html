@@ -40,24 +40,24 @@
         <div class="inner">
             <section>
                 <h2>Envíame un mensaje</h2>
-                <form method="post" action="#">
+                <form method="post" action="sendemail.php" name="contact-form">
                     <div class="row uniform">
                         <div class="6u 12u$(large) 6u(medium) 12u$(xsmall)">
                             <label for="name">Nombre</label>
-                            <input type="text" name="name" id="name" />
+                            <input type="text" name="name" id="name" required="required" placeholder="Nombre" />
                         </div>
                         <div class="6u$ 12u$(large) 6u$(medium) 12u$(xsmall)">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" />
+                            <input type="email" name="email" id="email" required="required" placeholder="Correo electrónico" />
                         </div>
                         <div class="12u$">
                             <label for="message">Mensaje</label>
-                            <textarea name="message" id="message" rows="5"></textarea>
+                            <textarea name="message" id="message" rows="5" required="required" placeholder="Contenido del mensaje"></textarea>
                         </div>
                         <div class="12u$">
                             <ul class="actions">
                                 <li>
-                                    <input type="submit" value="Enviar" class="special" />
+                                    <input type="submit" name="submit" value="Enviar" class="special form_submit" />
                                 </li>
                                 <li>
                                     <input type="reset" value="Borrar campos" />
@@ -111,7 +111,6 @@
     <script src="assets/js/util.js"></script>
     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
-    </script>
 
 </body>
 
