@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Lydia Sánchez González - Psicóloga Sanitaria, terapeuta EMDR e integradora social</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+
+    <style>
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header" class="alt1">
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobremi.html">Sobre mi</a></li>
+                <li><a href="mitrabajo.html">Mi trabajo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact -->
+    <section id="contact" class="wrapper split">
+        <div class="inner">
+            <section>
+                <h2>Envíame un mensaje</h2>
+                <form method="post" action="sendemail.php" name="contact-form">
+                    <div class="row uniform">
+                        <div class="6u 12u$(large) 6u(medium) 12u$(xsmall)">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" id="name" required="required" placeholder="Nombre" />
+                        </div>
+                        <div class="6u$ 12u$(large) 6u$(medium) 12u$(xsmall)">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required="required" placeholder="Correo electrónico" />
+                        </div>
+                        <div class="12u$">
+                            <label for="message">Mensaje</label>
+                            <textarea name="message" id="message" rows="5" required="required" placeholder="Contenido del mensaje"></textarea>
+                        </div>
+                        <div class="12u$">
+                            <ul class="actions">
+                                <li>
+                                    <input type="submit" name="submit" value="Enviar" class="special form_submit" />
+                                </li>
+                                <li>
+                                    <input type="reset" value="Borrar campos" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section>
+                <div id="map"></div>
+                <script>
+                    function initMap() {
+                        var uluru = {
+                            lat: -25.363,
+                            lng: 131.044
+                        };
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 4,
+                            center: uluru
+                        });
+                        var marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map
+                        });
+                    }
+                </script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbx8nmWpVsa_7AUN01KwbLLti0JBkHeIY&callback=initMap">
+                </script>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <p class="copyright">&copy; Lidia Sánchez González. Todos los derechos reservados. Desarrollo y diseño web por <a href="http://www.carlosvlosada.com" target="_blank">Carlos Vázquez Losada</a>.</p>
+            <ul class="menu">
+                <li><a href="#">Términos<span> de uso</span></a></li>
+                <li><a href="#">Política<span> de privacidad</span></a></li>
+                <li><a href="#">Información<span> legal</span></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
